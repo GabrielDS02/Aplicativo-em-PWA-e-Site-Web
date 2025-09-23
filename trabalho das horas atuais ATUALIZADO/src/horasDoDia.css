@@ -1,0 +1,244 @@
+  /* ponto "." = para classes para chamar do html*/
+  /* hashtag "#" = para id para chamar do html*/
+
+
+h1 
+  {
+  font-size: 22px;
+  }
+p 
+  {
+  font-size: 14px;
+  }
+#container 
+  {
+  width: 70%;
+  }
+/* Define estilos básicos para o corpo da página */
+html, body 
+{
+  margin: 0;    /* Remove a margem padrão do navegador dos elementos html e body */
+  padding: 0;   /* Remove o espaçamento interno padrão (padding) do html e body */
+  height: 100%; /* Define que o html e body devem ter 100% da altura do viewport (tela) */
+}
+
+body 
+{
+  padding-bottom: 80px; /* Cria espaço no final da página pro footer não sobrepor conteúdo */
+  min-height: 100vh; /* 100% da altura da viewport */
+  background-image: url("paisagemDeFundo.jpg");       /* Define a imagem de fundo da página */
+  background-size: cover;                             /* Faz a imagem cobrir todo o fundo, ajustando proporção */
+  background-position: center;                        /* Centraliza a imagem no meio da tela */
+  background-repeat: no-repeat;                       /* Evita que a imagem se repita */
+  margin: 0;                                          /* Remove margens padrão do body */
+  padding: 0;                                         /* Remove o padding padrão do body */
+  font-family: Arial, Helvetica, sans-serif;         /* Define a fonte usada na página */
+  text-align: center;                                 /* Centraliza o texto horizontalmente */
+  background-color: #f0f0f0;                          /* Cor de fundo caso a imagem não carregue */
+  transition: background-color 0.5s ease;             /* Transição suave ao mudar a cor do fundo */
+  color: #333;                                        /* Cor do texto padrão */
+}
+
+/* Título principal */
+#Titulo 
+{
+  font-size: 2.0em;
+  margin-top: 50px;
+  color: #ffffff;
+}
+
+/* Parágrafo de mensagem */
+#mensagem,
+#Hora
+{
+  font-size: 1.2em;
+  color: #ffffff;
+  margin: 20px;
+  color: #ffffff;
+}
+
+.conteudo-principal 
+{
+  background-color: rgba(0, 0, 0, 0.5); /* fundo preto com 50% de transparência para melhor contraste */
+  padding: 30px 40px;                   /* mais espaçamento interno para conforto visual */
+  border-radius: 15px;                  /* cantos mais arredondados para um visual mais suave */
+  max-width: 700px;                     /* largura máxima maior para melhor aproveitamento em telas maiores */
+  margin: 60px auto;                    /* centraliza horizontalmente e dá espaço vertical */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3); /* sombra sutil para destacar o bloco do fundo */
+  color: #fff;                         /* texto branco para contraste com o fundo escuro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte moderna e legível */
+  text-align: center;                   /* texto centralizado para um layout mais harmonioso */
+  line-height: 1.5;                    /* espaçamento entre linhas para melhor leitura */
+  transition: transform 0.3s ease;     /* animação suave para efeito hover */
+}
+
+.conteudo-principal:hover 
+{
+  transform: translateY(-10px);        /* efeito sutil de "levantar" ao passar o mouse */
+}
+
+/* Estilização principal do rodapé */
+#rodape 
+{
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro com transparência */
+  color: white;                         /* Texto branco */
+  padding: 20px 0;                      /* Espaço interno */
+  text-align: center;                   /* Centraliza o conteúdo */
+  font-size: 16px;                      /* Tamanho da fonte */
+  position: fixed;                     /* Faz o footer ficar fixo na tela */
+  bottom: 0;                           /* Cola o footer na parte inferior da tela */
+  left: 0;                             /* Garante que comece na esquerda */
+  width: 100%;                         /* Ocupa 100% da largura */
+  z-index: 2;                          /* Fica acima do vídeo de fundo */
+}
+
+/* Estilização da lista de links no rodapé */
+#rodape ul 
+{
+  list-style: none;                    /* Remove os marcadores de lista (bolinhas) */
+  padding: 0;                          /* Remove o preenchimento padrão da lista */
+  margin: 0;                           /* Remove as margens padrão da lista */
+  display: flex;                       /* Exibe os itens da lista lado a lado (flexbox) */
+  justify-content: center;            /* Centraliza os itens horizontalmente */
+  gap: 40px;                           /* Espaço de 40px entre os itens da lista */
+  flex-wrap: wrap;                    /* Permite que os itens quebrem linha em telas pequenas */
+}
+
+/* Estilização dos links dentro dos itens da lista */
+#rodape a
+{
+  text-decoration: none;              /* Remove o sublinhado padrão dos links */
+  color: #ffffffcc;                   /* Cor branca com 80% de opacidade (leve transparência) */
+  transition: color 0.3s ease;        /* Animação suave ao mudar de cor quando passar o mouse */
+}
+
+/* Estilização ao passar o mouse sobre os links */
+#rodape a:hover 
+{
+  color: #FFD700;                     /* Muda a cor do link para dourado (cor de destaque) */
+}
+#videoFundo 
+{
+  position: fixed;       /* fixa no fundo da página */
+  top: 0;                /* alinhado ao topo */
+  left: 0;               /* alinhado à esquerda */
+  width: 100vw;          /* largura total da viewport */
+  height: 100vh;         /* altura total da viewport */
+  object-fit: cover;     /* cobre toda área, mantendo proporção */
+  z-index: -1;           /* fica atrás do conteúdo */
+  display: none;         /* inicia oculto, só aparece quando troca o vídeo */
+}
+
+
+@media (max-width: 768px)
+{
+   h1 
+   {
+    font-size: 22px;
+   }
+   p 
+   {
+    font-size: 14px;
+   }
+   #container 
+   {
+    width: 70%;
+   }
+
+    html, body 
+    {
+      margin: 0;    /* Remove a margem padrão do navegador dos elementos html e body */
+      padding: 0;   /* Remove o espaçamento interno padrão (padding) do html e body */
+      height: 100%; /* Define que o html e body devem ter 100% da altura do viewport (tela) */
+    }
+   body 
+    {
+      padding-bottom: 80px; /* Cria espaço no final da página pro footer não sobrepor conteúdo */
+      min-height: 100vh; /* 100% da altura da viewport */
+      background-image: url("paisagemDeFundo.jpg");       /* Define a imagem de fundo da página */
+      background-size: cover;                             /* Faz a imagem cobrir todo o fundo, ajustando proporção */
+      background-position: center;                        /* Centraliza a imagem no meio da tela */
+      background-repeat: no-repeat;                       /* Evita que a imagem se repita */
+      margin: 0;                                          /* Remove margens padrão do body */
+      padding: 0;                                         /* Remove o padding padrão do body */
+      font-family: Arial, Helvetica, sans-serif;         /* Define a fonte usada na página */
+      text-align: center;                                 /* Centraliza o texto horizontalmente */
+      background-color: #f0f0f0;                          /* Cor de fundo caso a imagem não carregue */
+      transition: background-color 0.5s ease;             /* Transição suave ao mudar a cor do fundo */
+      color: #333;                                        /* Cor do texto padrão */
+    }
+
+    /* Estilos para o vídeo de fundo */
+    #videoFundo 
+    {
+    position: fixed;       /* fixa no fundo da página */
+    top: 0;                /* alinhado ao topo */
+    left: 0;               /* alinhado à esquerda */
+    width: 100vw;          /* largura total da viewport */
+    height: 100vh;         /* altura total da viewport */
+    object-fit: cover;     /* cobre toda área, mantendo proporção */
+    z-index: -1;           /* fica atrás do conteúdo */
+    display: none;         /* inicia oculto, só aparece quando troca o vídeo */
+    }
+    .conteudo-principal 
+    {
+      background-color: rgba(0, 0, 0, 0.5); /* fundo preto com 50% de transparência para melhor contraste */
+      padding: 30px 40px;                   /* mais espaçamento interno para conforto visual */
+      border-radius: 15px;                  /* cantos mais arredondados para um visual mais suave */
+      max-width: 700px;                     /* largura máxima maior para melhor aproveitamento em telas maiores */
+      margin: 60px auto;                    /* centraliza horizontalmente e dá espaço vertical */
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3); /* sombra sutil para destacar o bloco do fundo */
+      color: #fff;                         /* texto branco para contraste com o fundo escuro */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte moderna e legível */
+      text-align: center;                   /* texto centralizado para um layout mais harmonioso */
+      line-height: 1.5;                    /* espaçamento entre linhas para melhor leitura */
+      transition: transform 0.3s ease;     /* animação suave para efeito hover */
+    }
+
+    .conteudo-principal:hover 
+    {
+      transform: translateY(-10px);        /* efeito sutil de "levantar" ao passar o mouse */
+    }
+    /* Estilização principal do rodapé */
+    #rodape 
+    {
+      background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro com transparência */
+      color: white;                         /* Texto branco */
+      padding: 20px 0;                      /* Espaço interno */
+      text-align: center;                   /* Centraliza o conteúdo */
+      font-size: 16px;                      /* Tamanho da fonte */
+      position: fixed;                     /* Faz o footer ficar fixo na tela */
+      bottom: 0;                           /* Cola o footer na parte inferior da tela */
+      left: 0;                             /* Garante que comece na esquerda */
+      width: 100%;                         /* Ocupa 100% da largura */
+      z-index: 2;                          /* Fica acima do vídeo de fundo */
+    }
+
+    /* Estilização da lista de links no rodapé */
+    #rodape ul 
+    {
+      list-style: none;                    /* Remove os marcadores de lista (bolinhas) */
+      padding: 0;                          /* Remove o preenchimento padrão da lista */
+      margin: 0;                           /* Remove as margens padrão da lista */
+      display: flex;                       /* Exibe os itens da lista lado a lado (flexbox) */
+      justify-content: center;            /* Centraliza os itens horizontalmente */
+      gap: 40px;                           /* Espaço de 40px entre os itens da lista */
+      flex-wrap: wrap;                    /* Permite que os itens quebrem linha em telas pequenas */
+    }
+
+    /* Estilização dos links dentro dos itens da lista */
+    #rodape a 
+    {
+      text-decoration: none;              /* Remove o sublinhado padrão dos links */
+      color: #ffffffcc;                   /* Cor branca com 80% de opacidade (leve transparência) */
+      transition: color 0.3s ease;        /* Animação suave ao mudar de cor quando passar o mouse */
+    }
+
+    /* Estilização ao passar o mouse sobre os links */
+    #rodape a:hover 
+    {
+      color: #FFD700;                     /* Muda a cor do link para dourado (cor de destaque) */
+    }
+}
+
+

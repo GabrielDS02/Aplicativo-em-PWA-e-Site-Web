@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App saudação</title>
+    <link rel="stylesheet" href="horasDoDia.css" /> <!-- CSS -->
+    <script src="horasDoDia.js"></script> <!-- javascript, para funcionar o app/web -->
+    <!-- Manifest do PWA -->
+    <script src="service-worker.js"></script> <!-- conecta o java script para o service worker -->
+    <script src="ConexãoOfline.js"></script> <!-- arquivo para a conexão ofline, em java script -->
+    <link rel ="manifest" href="manifest.json">
+    <meta name ="theme-color" content="#000000">
+    <meta name = "viewport" content="width=device-width, initial-scale = 1.0">
+</head>
+<body>
+
+     <!-- source chama o video no html, type seria onde o video esta que seria na pasta video/mp4-->
+    <video id="videoFundo" autoplay muted loop style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+      <source src="" type="video/mp4" /> <!-- esse src esta vazio pois esta sendo chamado la no java nos sets time out las nos if, com "source.src = 'videos/tarde.mp4';" chamando a pasta videos com o nome do video que eu quero -->
+      Seu navegador não suporta vídeo em background.
+    </video>
+
+    <!-- Conteúdo principal dentro da div -->
+    <div id ="container" class="conteudo-principal" style="position: relative; z-index: 1; padding: 20px; color: white;">
+        <h1 id="Titulo">Bom dia ☀️ !!</h1>
+        <p id="Hora"></p>
+        <p id="mensagem"></p>
+        <p id="DiaUtil"></p>
+        <p id="fraseFinal">A cada amanhecer, temos a chance de recomeçar. Aproveite o agora, pois o amanhã começa com a força das suas ações de hoje.</p>
+    </div>
+</body>
+
+<!-- rodape so na pagina principal-->
+<footer id="rodape">
+  <ul>
+    <li><a href="#">🌐 www.horasAtuais.com.br</a></li>
+    <li><a href="#">📞 Contato</a></li>
+    <li><a href="#">📱 Telefone</a></li>
+  </ul>
+</footer>
+</html>
